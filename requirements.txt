@@ -1,0 +1,6 @@
+fastapi
+fastapi 
+uvicorn
+python-dotenv
+aiohttp
+azure-cosmos
