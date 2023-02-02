@@ -31,8 +31,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: cosmosdbtest.azurecr.io
-          username: ${{ env.COSMOSDB_FASTAPI_REGISTRY_USERNAME }}
-          password: ${{ env.COSMOSDB_FASTAPI_PASSWORD }}
+          username: ${COSMOSDB_FASTAPI_REGISTRY_USERNAME}
+          password: ${COSMOSDB_FASTAPI_PASSWORD}
 
       - name: Build and push container image to registry
         uses: docker/build-push-action@v4
@@ -51,7 +51,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-          creds: ${{ env.COSMOSDB_FASTAPI_AZURE_CREDENTIALS }}
+          creds: ${COSMOSDB_FASTAPI_AZURE_CREDENTIALS}
       - name: Deploy to containerapp
         uses: azure/CLI@v1
         with:
