@@ -19,7 +19,7 @@ jobs:
     environment: TEST
     env:
       COSMOSDB_FASTAPI_REGISTRY_USERNAME: ${{secrets.COSMOSDB_FASTAPI_REGISTRY_USERNAME}}
-      COSMOSDB_FASTAPI_PASSWORD: ${{secrets.COSMOSDB_FASTAPI_PASSWORD}}
+      COSMOSDB_FASTAPI_PASSWORD: ${{secrets.COSMOSDB_FASTAPI_REGISTRY_PASSWORD}}
     steps:
       - name: Checkout to the branch
         uses: actions/checkout@v2
