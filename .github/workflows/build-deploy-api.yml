@@ -31,7 +31,7 @@ jobs:
           username: ${COSMOSDB_FASTAPI_REGISTRY_USERNAME}
           password: ${COSMOSDB_FASTAPI_PASSWORD}
       - run: |
-          docker build . -t cosmosdbtest.azurecr.io/cosmosdb-fast-api:${{ github.sha }}, cosmosdbtest.azurecr.io/cosmosdb-fast-api:latest
+          docker build . -t cosmosdbtest.azurecr.io/cosmosdb-fast-api:${{ github.sha }}
           docker push cosmosdbtest.azurecr.io/cosmosdb-fast-api:${{ github.sha }}
 
   deploy:
